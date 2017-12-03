@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS= -g -lGLU -lGL
+CFLAGS= -Wall -Wextra -g
 OBJ_FILES= main.o matrix.o cell.o
 
 all:simulator
@@ -18,3 +18,9 @@ cell.o: cell.cpp cell.h
 
 clean:
 	rm -f *.o simulator
+
+run:
+	./simulator -h 100 -n 50 -i 0.7 -s 0.1 -m 0 -k 10 -f vysledek1
+	./simulator -h 100 -n 50 -i 0.7 -s 0.1 -m 0 -k 20 -f vysledek2
+	./simulator -h 100 -n 50 -i 0.7 -s 0.1 -m 0 -k 30 -f vysledek3
+
